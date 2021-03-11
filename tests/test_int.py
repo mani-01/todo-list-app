@@ -22,12 +22,7 @@ class TestBase(LiveServerTestCase):
         print("--------------------------NEXT-TEST----------------------------------------------")
         chrome_options = Options()
         chrome_options.binary_location = "/usr/bin/chromium-browser"
-        chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--headless')
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--profile-directory=Default')
-        chrome_options.add_argument('--user-data-dir=~/.config/google-chrome')
         self.driver = webdriver.Chrome(executable_path=f'{getenv("CHROMEDRIVER_PATH")}/chromedriver', chrome_options=chrome_options)
         self.driver.get("http://localhost:5001")
         db.drop_all()

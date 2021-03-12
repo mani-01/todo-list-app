@@ -45,4 +45,4 @@ sudo apt-get install -y python3-pip python3-venv unzip chromium-browser
 
 Post-build actions are defined in the `post{}` section of the pipeline. They publish the reports produced by the `test.sh` script and require JUnit and Cobertura plugins to be installed on your Jenkins instance (JUnit tends to be installed by default).
 
-The `Jenkinsfile` does not currently install Docker or Docker Compose. As such, these must be installed manually. Getting Jenkins to push to Docker Hub requires the `jenkins` user to have performed `docker login`.
+The `Jenkinsfile` does not currently install Docker or Docker Compose. As such, these must be installed manually. Getting Jenkins to push to Docker Hub requires the `jenkins` user to have performed `docker login`. 
